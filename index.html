@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+      <button id="closeSidebar" class="close-btn">✖</button>
+      <h2 class="sidebar-title">TYPE</h2>
+
+        <ul class="nav-list types-list">
+            <li><button class="btn-header normal" id="normal">NORMAL</button></li>
+            <li><button class="btn-header dark" id="dark">DARK</button></li>
+            <li><button class="btn-header dragon" id="dragon">DRAGON</button></li>
+            <li><button class="btn-header electric" id="electric">ELECTRIC</button></li>
+            <li><button class="btn-header fairy" id="fairy">FAIRY</button></li>
+            <li><button class="btn-header fighting" id="fighting">FIGHTING</button></li>
+            <li><button class="btn-header fire" id="fire">FIRE</button></li>
+            <li><button class="btn-header flying" id="flying">FLYING</button></li>
+            <li><button class="btn-header ghost" id="ghost">GHOST</button></li>
+            <li><button class="btn-header grass" id="grass">GRASS</button></li>
+            <li><button class="btn-header ground" id="ground">GROUND</button></li>
+            <li><button class="btn-header ice" id="ice">ICE</button></li>
+            <li><button class="btn-header poison" id="poison">POISON</button></li>
+            <li><button class="btn-header psychic" id="psychic">PSYCHIC</button></li>
+            <li><button class="btn-header rock" id="rock">ROCK</button></li>
+            <li><button class="btn-header steel" id="steel">STEEL</button></li>
+            <li><button class="btn-header water" id="water">WATER</button></li>
+            <li><button class="btn-header bug" id="bug">BUG</button></li>
+        </ul>
+
+        <h2 class="sidebar-title">GENERATION</h2>
+
+        <ul class="nav-list gen-list">
+            <li><button class="btn-header gen-btn kanto" id="kanto">KANTO</button></li>
+            <li><button class="btn-header gen-btn johto" id="johto">JOHTO</button></li>
+            <li><button class="btn-header gen-btn hoenn" id="hoenn">HOENN</button></li>
+            <li><button class="btn-header gen-btn sinnoh" id="sinnoh">SINNOH</button></li>
+            <li><button class="btn-header gen-btn unova" id="unova">UNOVA</button></li>
+            <li><button class="btn-header gen-btn kalos" id="kalos">KALOS</button></li>
+            <li><button class="btn-header gen-btn alola" id="alola">ALOLA</button></li>
+            <li><button class="btn-header gen-btn galar" id="galar">GALAR</button></li>
+          </ul>
+  </aside>
+
+  <main class="main">
+    <header>
+      <nav class="nav">
+        <button class="menu-btn" id="menu-btn">☰</button>
+        <img src="./logo.png" alt="Pokédex Logo">
+        <button class="btn btn-header" id="view-all">View All</button>
+      </nav>
+        <div class="search-container">
+         <input type="text" id="searchInput" placeholder="Search Pokémon">
+         <button id="searchButton">SEARCH POKÉMON</button>
+        </div>
+    </header>
+    
+    <div id="all">
+      <div class="pokemon-all" id="pokemonList">
+      </div>
+    </div>
+    </main>
+    <div id="pokemonModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+      <script src="./script.js"></script>
+      <script>
+        const sidebar = document.getElementById('sidebar');
+        const menuBtn = document.getElementById('menu-btn');
+        menuBtn.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+        });
+      </script>
+    </div>
+  </body>
+</html>
